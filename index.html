@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NAVTEX</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link rel="stylesheet" href="leaflet.css"/>
+    <script src="leaflet.js"></script>
+    <script src="eez.js"></script>
+</head>
+<body>
+	<div id="mapid" style="width: 1200px; height: 900px;"></div>
+	<script>
+		var tiles = "http://{s}.www.toolserver.org/tiles/bw-mapnik/{z}/{x}/{y}.png";
+		var attribution = '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>';
+
+		var base = new L.TileLayer(tiles, {
+			maxZoom: 18,
+			minZoom: 6,
+			attribution: attribution
+		});
+
+		var mymap = new L.Map('mapid', {
+			layers: [base],
+			center: new L.LatLng(0, 0), zoom: 6
+		}).setView([34.0, 29.0], 7);
+
+		L.geoJSON(eez, {color: 'black', fill: false, weight: 1}).addTo(mymap);
+
+		var polyline = L.polyline([
+			[33.530500, 27.590200],
+			[33.415641, 27.304247],
+			[33.352409, 26.493427],
+			[33.302624, 26.273554],
+			[33.245614, 26.000000]
+		], {color: 'blue', lineCap: 'square'}).addTo(mymap);
+
+		var polygon = L.polygon([
+			[33.5522, 27.5983],
+			[34.5825, 30.3150],
+			[34.1818, 30.5452],
+			[34.1703, 30.0612],
+			[33.4913, 30.0638],
+			[33.4095, 28.4662],
+			[33.4737, 28.2027],
+			[33.5298, 27.5997],
+		], {color: 'yellow'}).addTo(mymap);
+
+		var polygon = L.polygon([
+			[33.5522, 27.5983],
+			[34.5825, 30.3150],
+			[34.1818, 30.5452],
+			[34.1703, 30.0612],
+			[33.4984, 30.0678],
+			[33.4125, 28.4616],
+			[33.4741, 28.2148],
+			[33.5337, 27.5990]
+		], {color: 'red', fill: false, dashArray: '5, 10'}).addTo(mymap);
+	</script>
+</body>
+</html>
