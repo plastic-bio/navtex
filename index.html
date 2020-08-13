@@ -12,7 +12,7 @@
 	<div style="text-align: cente;r">
 		<div>
 			<p><strong style="color:grey;">Γκρι γραμμή                  :  Τα χωρικά ύδατα</strong> (πηγή: Open Street Map, https://openstreetmap.org)</p>
-			<p><strong>Μαύρη γραμμή                 :  ΑΟΖ</strong> (πηγή: Flanders Marine Institute, https://marineregions.org)</p>
+			<p><strong style="color:black;">Μαύρη γραμμή                 :  ΑΟΖ</strong> (πηγή: Flanders Marine Institute, https://marineregions.org)</p>
 			<p><strong style="color:blue;">Μπλε γραμμή                  :  Σύνορα με Αίγυπτο</strong> (πηγή: Ελληνικός τύπος, PDF της συμφωνίας)</p>
 			<p><strong style="color:gold;">Κίτρινη γραμμή               :  NAVTEX 21-07-2020</strong> (πηγή: Antalya NAVTEX station, http://www.shodb.gov.tr/shodb_esas/index.php/)</p>
 			<p><strong style="color:red;">Κόκκινη γραμμή (διακεκομμένη):  NAVTEX 10-08-2020</strong> (πηγή: Antalya NAVTEX station, http://www.shodb.gov.tr/shodb_esas/index.php/)</p>
@@ -37,33 +37,33 @@
 		L.geoJSON(eez, {color: 'black', fill: false, weight: 1}).addTo(mymap);
 
 		var polyline = L.polyline([
-			[33.530500, 27.590200],
-			[33.415641, 27.304247],
-			[33.352409, 26.493427],
-			[33.302624, 26.273554],
-			[33.245614, 26.000000]
+			[33.884722, 27.983889],
+			[33.699003, 27.511797],
+			[33.590025, 26.826186],
+			[33.507289, 26.459872],
+			[33.415594, 26.000000]
 		], {color: 'blue', lineCap: 'square'}).addTo(mymap);
 
 		var polygon = L.polygon([
-			[33.5522, 27.5983],
-			[34.5825, 30.3150],
-			[34.1818, 30.5452],
-			[34.1703, 30.0612],
-			[33.4913, 30.0638],
-			[33.4095, 28.4662],
-			[33.4737, 28.2027],
-			[33.5298, 27.5997],
+			[33.922778, 28.006389],
+			[34.973611, 30.530556],
+			[34.305000, 30.914444],
+			[34.284167, 30.103333],
+			[33.820278, 30.110556],
+			[33.693056, 28.783889],
+			[33.793611, 28.340833],
+			[33.893889, 28.010278]
 		], {color: 'yellow'}).addTo(mymap);
 
 		var polygon = L.polygon([
-			[33.5522, 27.5983],
-			[34.5825, 30.3150],
-			[34.1818, 30.5452],
-			[34.1703, 30.0612],
-			[33.4984, 30.0678],
-			[33.4125, 28.4616],
-			[33.4741, 28.2148],
-			[33.5337, 27.5990]
+			[33.922778, 28.006389],
+			[34.973611, 30.530556],
+			[34.305000, 30.914444],
+			[34.284167, 30.103333],
+			[33.840000, 30.121667],
+			[33.690278, 28.771111],
+			[33.794722, 28.363333],
+			[33.893611, 28.008333]
 		], {color: 'red', fill: false, dashArray: '5, 10'}).addTo(mymap);
 	</script>
 </body>
