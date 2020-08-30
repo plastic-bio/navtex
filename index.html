@@ -10,14 +10,14 @@
 </head>
 <body style="text-align: center; width: 100%;">
 	<div style="text-align: cente;r">
-		<!--
 		<div>
+			<p><strong style="color:gold;">Κίτρινη γραμμή               :  NAVTEX 21-07-2020</strong> (πηγή: Antalya NAVTEX station, http://www.shodb.gov.tr/shodb_esas/index.php/)</p>
+		</div>
+		<!--
 			<p><strong style="color:grey;">Γκρι γραμμή                  :  Τα χωρικά ύδατα</strong> (πηγή: Open Street Map, https://openstreetmap.org)</p>
 			<p><strong style="color:black;">Μαύρη γραμμή                 :  ΑΟΖ</strong> (πηγή: Flanders Marine Institute, https://marineregions.org)</p>
 			<p><strong style="color:blue;">Μπλε γραμμή                  :  Σύνορα με Αίγυπτο</strong> (πηγή: Ελληνικός τύπος, PDF της συμφωνίας)</p>
-			<p><strong style="color:gold;">Κίτρινη γραμμή               :  NAVTEX 21-07-2020</strong> (πηγή: Antalya NAVTEX station, http://www.shodb.gov.tr/shodb_esas/index.php/)</p>
 			<p><strong style="color:red;">Κόκκινη γραμμή (διακεκομμένη):  NAVTEX 10-08-2020</strong> (πηγή: Antalya NAVTEX station, http://www.shodb.gov.tr/shodb_esas/index.php/)</p>
-		</div>
 		-->
 		<div id="map" style="width: 1200px; height: 900px; margin: 0 auto;"></div>
 	</div>
@@ -39,7 +39,7 @@
 		L.geoJSON(eez, {color: 'black', fill: false, weight: 1}).addTo(mymap);
 
 
-		var polyline = L.polyline([
+/*		var polyline = L.polyline([
 			[33.884722, 27.983889],
 			[33.699003, 27.511797],
 			[33.590025, 26.826186],
@@ -88,7 +88,7 @@
 			[36.406389, 35.068611],
 			[36.533333, 34.700000]
 		], {color: 'red', fill: false}).addTo(mymap);
-
+*/
 		
 		var polygon = L.polygon([
 			[36.585556, 35.543611],
